@@ -144,3 +144,6 @@ DorrBrowser is a personal development project built with passion and curiosity. 
 **Thank you for visiting DorrBrowser!**
 
 © 2026 DorrBrowser Project
+
+
+I made this in a week, so the quality is low! I'm sorry!!
