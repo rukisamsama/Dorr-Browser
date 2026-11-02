@@ -1,6 +1,17 @@
 # v1.0.0
 # Dorr Search
 
+---
+
+## 👨‍💻 Developer
+
+Created independently by a Japanese junior high school student.
+
+DorrBrowser is a personal development project built with passion and curiosity.
+I am continuously working to improve its features and user experience.
+
+© 2026 DorrBrowser Project
+
 Dorr Search is a lightweight search application built with Python,
 FastAPI, SQLite, and a web-based interface.
 
@@ -103,4 +114,5 @@ Install PySide6 through requirements.txt before using it.
     ├── config.py
     ├── requirements.txt
     └── run.py
+
     https://1c078ecf4dfe99.lhr.life/
