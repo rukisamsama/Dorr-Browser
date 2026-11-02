@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10131c">
+    <meta name="description" content="Dorr Search - 必要な情報を、シンプルに。">
+    <title>{{ app_name }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- Header -->
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="Dorr Search ホーム">
+                <span class="brand-mark">D</span>
+                <span>Dorr Search</span>
+            </a>
+
+            <nav class="top-actions" aria-label="メインメニュー">
+                <button id="history-button" class="icon-button" type="button">
+                    履歴
+                </button>
+
+                <button id="bookmarks-button" class="icon-button" type="button">
+                    ブックマーク
+                </button>
+
+                <button id="settings-button" class="icon-button" type="button">
+                    設定
+                </button>
+
+                <button id="shortcuts-button" class="icon-button" type="button">
+                    ショートカット
+                </button>
+            </nav>
+        </header>
+
+        <main>
+
+            <!-- Search Hero -->
+            <section class="hero" id="hero">
+
+                <div class="hero-logo">D</div>
+
+                <p class="eyebrow">
+                    A SEARCH EXPERIENCE BY DORR
+                </p>
+
+                <h1>何を探していますか？</h1>
+
+                <p class="hero-description">
+                    必要な情報を、シンプルに。
+                </p>
+
+                <!-- Search Form -->
+                <form id="search-form" class="search-form">
+
+                    <div class="search-box">
+
+                        <span class="search-icon" aria-hidden="true">
+                            ⌕
+                        </span>
+
+                        <input
+                            id="search-input"
+                            type="search"
+                            placeholder="キーワードを入力..."
+                            autocomplete="off"
+                            maxlength="300"
+                            aria-label="検索キーワード"
+                            aria-controls="suggestions"
+                        >
+
+                        <button
+                            type="submit"
+                            class="search-submit"
+                        >
+                            検索
+                        </button>
+
+                    </div>
+
+                    <!-- Search Suggestions -->
+                    <div
+                        id="suggestions"
+                        class="suggestions hidden"
+                        role="listbox"
+                        aria-label="検索候補"
+                    ></div>
+
+                </form>
+
+                <!-- Standard Service Shortcuts -->
+                <section class="standard-shortcuts" aria-label="標準ショートカット">
+                    <div class="standard-shortcuts-grid">
+                        <a class="standard-shortcut" href="https://discord.com/" aria-label="Discord">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/discord/5865F2" alt="" loading="lazy"><span class="shortcut-fallback">D</span></span>
+                            <span class="standard-shortcut-label">Discord</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://chatgpt.com/" aria-label="ChatGPT">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="" loading="lazy"><span class="shortcut-fallback">AI</span></span>
+                            <span class="standard-shortcut-label">ChatGPT</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://gemini.google.com/" aria-label="Gemini">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/googlegemini/8AB4F8" alt="" loading="lazy"><span class="shortcut-fallback">G</span></span>
+                            <span class="standard-shortcut-label">Gemini</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.youtube.com/" aria-label="YouTube">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/youtube/FF0033" alt="" loading="lazy"><span class="shortcut-fallback">▶</span></span>
+                            <span class="standard-shortcut-label">YouTube</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://arc.net/" aria-label="Arc">
+                            <span class="standard-shortcut-icon arc-shortcut-icon"><span class="arc-mark">A</span></span>
+                            <span class="standard-shortcut-label">Arc</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://play.google.com/" aria-label="Google Play">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/googleplay/FFFFFF" alt="" loading="lazy"><span class="shortcut-fallback">▶</span></span>
+                            <span class="standard-shortcut-label">Google Play</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.nvidia.com/" aria-label="NVIDIA">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/nvidia/76B900" alt="" loading="lazy"><span class="shortcut-fallback">N</span></span>
+                            <span class="standard-shortcut-label">NVIDIA</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://x.com/" aria-label="X">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/x/FFFFFF" alt="" loading="lazy"><span class="shortcut-fallback">X</span></span>
+                            <span class="standard-shortcut-label">X</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.instagram.com/" aria-label="Instagram">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" loading="lazy"><span class="shortcut-fallback">◎</span></span>
+                            <span class="standard-shortcut-label">Instagram</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.reddit.com/" aria-label="Reddit">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/reddit/FF4500" alt="" loading="lazy"><span class="shortcut-fallback">r</span></span>
+                            <span class="standard-shortcut-label">Reddit</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.twitch.tv/" aria-label="Twitch">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/twitch/9146FF" alt="" loading="lazy"><span class="shortcut-fallback">T</span></span>
+                            <span class="standard-shortcut-label">Twitch</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://www.tiktok.com/" aria-label="TikTok">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="" loading="lazy"><span class="shortcut-fallback">♪</span></span>
+                            <span class="standard-shortcut-label">TikTok</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://myanimelist.net/" aria-label="MyAnimeList">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/myanimelist/FFFFFF" alt="" loading="lazy"><span class="shortcut-fallback">A</span></span>
+                            <span class="standard-shortcut-label">MyAnimeList</span>
+                        </a>
+                        <a class="standard-shortcut" href="https://open.spotify.com/" aria-label="Spotify">
+                            <span class="standard-shortcut-icon"><img src="https://cdn.simpleicons.org/spotify/1ED760" alt="" loading="lazy"><span class="shortcut-fallback">≋</span></span>
+                            <span class="standard-shortcut-label">Spotify</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Search Engine -->
+                <div class="search-options">
+
+                    <label for="search-engine">
+                        検索先
+                    </label>
+
+                    <select id="search-engine" aria-label="検索先">
+                        <option value="dorr">DorrSearch（内部検索）</option>
+                    </select>
+                    <p class="search-engine-note">外部の検索サイトへ移動せず、DorrSearch内で検索します。</p>
+
+                </div>
+
+            </section>
+
+            <!-- Search Results -->
+            <section
+                id="results-section"
+                class="results-section hidden"
+                aria-live="polite"
+            >
+
+                <div class="results-heading">
+
+                    <div>
+                        <p class="eyebrow">
+                            SEARCH RESULTS
+                        </p>
+
+                        <h2 id="results-title">
+                            検索結果
+                        </h2>
+                    </div>
+
+                    <span
+                        id="results-count"
+                        class="result-count"
+                    ></span>
+
+                </div>
+
+                <!-- Related Tags -->
+                <section
+                    id="related-tags-section"
+                    class="related-tags-section hidden"
+                    aria-label="関連タグ"
+                >
+
+                    <div class="related-tags-heading">
+                        <span>関連タグ</span>
+
+                        <span class="related-tags-count">
+                            RELATED
+                        </span>
+                    </div>
+
+                    <div
+                        id="related-tags"
+                        class="related-tags"
+                    ></div>
+
+                </section>
+
+                <!-- Results List -->
+                <div
+                    id="results-list"
+                    class="results-list"
+                ></div>
+
+            </section>
+
+            <!-- General Panel -->
+            <section
+                id="panel-section"
+                class="panel-section hidden"
+            >
+
+                <div class="panel-heading">
+
+                    <h2 id="panel-title"></h2>
+
+                    <button
+                        id="panel-close"
+                        class="icon-button"
+                        type="button"
+                    >
+                        閉じる
+                    </button>
+
+                </div>
+
+                <div id="panel-content"></div>
+
+            </section>
+
+            <!-- Quick Information -->
+            <section class="quick-info">
+
+                <div class="info-card">
+
+                    <span class="info-icon">⌕</span>
+
+                    <div>
+                        <strong>シンプルな検索</strong>
+
+                        <p>
+                            登録されたページから情報を探せるよ。
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+
+                    <span class="info-icon">☆</span>
+
+                    <div>
+                        <strong>ブックマーク</strong>
+
+                        <p>
+                            気になるページを保存できるよ。
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+
+                    <span class="info-icon">⚙</span>
+
+                    <div>
+                        <strong>カスタマイズ</strong>
+
+                        <p>
+                            テーマや検索設定を変更できるよ。
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <span>Dorr Search</span>
+
+            <span>
+                Version {{ app_version }}
+            </span>
+
+            <span id="page-count">
+                登録ページを確認中...
+            </span>
+
+        </footer>
+
+    </div>
+
+    <script src="/static/app.js" defer></script>
+
+</body>
+</html>
