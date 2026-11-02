@@ -1,3 +1,4 @@
+v1.0.0
 # Dorr Search
 
 Dorr Search is a lightweight search application built with Python,
@@ -102,3 +103,4 @@ Install PySide6 through requirements.txt before using it.
     ├── config.py
     ├── requirements.txt
     └── run.py
+    https://1c078ecf4dfe99.lhr.life/
