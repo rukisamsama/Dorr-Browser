@@ -1,4 +1,4 @@
-v1.0.0
+# v1.0.0
 # Dorr Search
 
 Dorr Search is a lightweight search application built with Python,
